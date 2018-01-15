@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	
+
+</head>
+
+<body>
+	{{> _header}}
+
+	<main>
+		<div class="container">
+		{{{body}}}
+		</div>
+	</main>
+    {{> _footer}}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+    <link rel='stylesheet' href='/css/style.css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script> 
+		$(document).ready(() => {
+			$('.button-collapse').sideNav();
+            $('select').material_select();
+            CKEDITOR.replace('body', {
+                plugins: 'wysiwygarea,toolbar,basicstyles,link'
+            });
+		})
+
+	</script>
+</body>
+</html>
