@@ -26,12 +26,15 @@ router.get('/show/:id', (req, res) => {
     .populate('comments.commentUser')
   .then(story => {
       if(story.status == 'public') {
-              res.render('stories/show', {
+//          console.log("sdaisdhoihdqoihwoqihdoqihw");
+          console.log(story.user.image);
+          res.render('stories/show', {
               story: story
             });
       }else {
           if(req.user) {
               if(req.user.id == story.user._id) {
+                  
                   res.render('stories/show', {
                       story: story
                     });
